@@ -13,19 +13,197 @@ export default function Grade1MathPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#FCF7ED" }}>
       {/* Header - Same as other pages */}
-      
+      <header className="sticky top-0 z-60 bg-[#D96E4C]" style={{ height: "72px" }}>
+        <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between gap-6 h-full">
+          <a href="/" className="text-white font-bold text-xl flex items-center gap-2">
+            <GraduationCap className="w-6 h-6" />
+            IELC
+          </a>
+
+          <nav className="nav-desktop hidden lg:flex items-center gap-10 font-semibold relative">
+            <a href="/register" className="text-white hover:opacity-85 transition-opacity">
+              Register a Student
+            </a>
+            <div
+              className="relative"
+              onMouseEnter={() => setMathDropdownOpen(true)}
+              onMouseLeave={() => setMathDropdownOpen(false)}
+            >
+              <button className="text-white hover:opacity-85 transition-opacity flex items-center gap-1">
+                Mathematics
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              {mathDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 bg-[#FCF7ED] rounded-lg shadow-lg py-2 min-w-[140px] z-70">
+                  <a
+                    href="/math/grade-1"
+                    className="block px-4 py-2 text-[#1E1E1E] hover:bg-[#E6CD67] transition-colors"
+                  >
+                    Grade 1
+                  </a>
+                  <a
+                    href="/math/grade-2"
+                    className="block px-4 py-2 text-[#1E1E1E] hover:bg-[#E6CD67] transition-colors"
+                  >
+                    Grade 2
+                  </a>
+                  <a
+                    href="/math/grade-3"
+                    className="block px-4 py-2 text-[#1E1E1E] hover:bg-[#E6CD67] transition-colors"
+                  >
+                    Grade 3
+                  </a>
+                  <a
+                    href="/math/grade-4"
+                    className="block px-4 py-2 text-[#1E1E1E] hover:bg-[#E6CD67] transition-colors"
+                  >
+                    Grade 4
+                  </a>
+                  <a
+                    href="/math/grade-5"
+                    className="block px-4 py-2 text-[#1E1E1E] hover:bg-[#E6CD67] transition-colors"
+                  >
+                    Grade 5
+                  </a>
+                </div>
+              )}
+            </div>
+            <div
+              className="relative"
+              onMouseEnter={() => setEnglishDropdownOpen(true)}
+              onMouseLeave={() => setEnglishDropdownOpen(false)}
+            >
+              <button className="text-white hover:opacity-85 transition-opacity flex items-center gap-1">
+                English
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              {englishDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 bg-[#FCF7ED] rounded-lg shadow-lg py-2 min-w-[140px] z-70">
+                  <a
+                    href="/english/grade-1"
+                    className="block px-4 py-2 text-[#1E1E1E] hover:bg-[#E6CD67] transition-colors"
+                  >
+                    Grade 1
+                  </a>
+                  <a
+                    href="/english/grade-2"
+                    className="block px-4 py-2 text-[#1E1E1E] hover:bg-[#E6CD67] transition-colors"
+                  >
+                    Grade 2
+                  </a>
+                  <a
+                    href="/english/grade-3"
+                    className="block px-4 py-2 text-[#1E1E1E] hover:bg-[#E6CD67] transition-colors"
+                  >
+                    Grade 3
+                  </a>
+                  <a
+                    href="/english/grade-4"
+                    className="block px-4 py-2 text-[#1E1E1E] hover:bg-[#E6CD67] transition-colors"
+                  >
+                    Grade 4
+                  </a>
+                  <a
+                    href="/english/grade-5"
+                    className="block px-4 py-2 text-[#1E1E1E] hover:bg-[#E6CD67] transition-colors"
+                  >
+                    Grade 5
+                  </a>
+                </div>
+              )}
+            </div>
+            <a href="/contact" className="text-white hover:opacity-85 transition-opacity">
+              Contact Us
+            </a>
+            <a href="/about" className="text-white hover:opacity-85 transition-opacity">
+              About Us
+            </a>
+          </nav>
+
+          <button
+            className="nav-toggle lg:hidden text-white"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Open menu"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {isMobileMenuOpen && (
+          <div className="nav-mobile lg:hidden bg-white shadow-lg">
+            <div className="px-6 py-4 space-y-4">
+              <a
+                href="/register"
+                className="block w-full bg-[#7B2D26] hover:bg-[#651f1d] text-white px-4 py-3 rounded-full font-semibold text-center transition-colors"
+              >
+                Register a Student
+              </a>
+              <div className="space-y-2">
+                <div className="text-gray-800 font-semibold py-2">Mathematics</div>
+                <div className="pl-4 space-y-1">
+                  <a href="/math/grade-1" className="block text-gray-600 py-1 hover:text-gray-800 transition-colors">
+                    Grade 1
+                  </a>
+                  <a href="/math/grade-2" className="block text-gray-600 py-1 hover:text-gray-800 transition-colors">
+                    Grade 2
+                  </a>
+                  <a href="/math/grade-3" className="block text-gray-600 py-1 hover:text-gray-800 transition-colors">
+                    Grade 3
+                  </a>
+                  <a href="/math/grade-4" className="block text-gray-600 py-1 hover:text-gray-800 transition-colors">
+                    Grade 4
+                  </a>
+                  <a href="/math/grade-5" className="block text-gray-600 py-1 hover:text-gray-800 transition-colors">
+                    Grade 5
+                  </a>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-gray-800 font-semibold py-2">English</div>
+                <div className="pl-4 space-y-1">
+                  <a href="/english/grade-1" className="block text-gray-600 py-1 hover:text-gray-800 transition-colors">
+                    Grade 1
+                  </a>
+                  <a href="/english/grade-2" className="block text-gray-600 py-1 hover:text-gray-800 transition-colors">
+                    Grade 2
+                  </a>
+                  <a href="/english/grade-3" className="block text-gray-600 py-1 hover:text-gray-800 transition-colors">
+                    Grade 3
+                  </a>
+                  <a href="/english/grade-4" className="block text-gray-600 py-1 hover:text-gray-800 transition-colors">
+                    Grade 4
+                  </a>
+                  <a href="/english/grade-5" className="block text-gray-600 py-1 hover:text-gray-800 transition-colors">
+                    Grade 5
+                  </a>
+                </div>
+              </div>
+              <a
+                href="/contact"
+                className="block text-gray-800 font-semibold py-2 hover:text-gray-600 transition-colors"
+              >
+                Contact Us
+              </a>
+              <a href="/about" className="block text-gray-800 font-semibold py-2 hover:text-gray-600 transition-colors">
+                About Us
+              </a>
+            </div>
+          </div>
+        )}
+      </header>
+
       {/* Hero Section */}
       <section className="relative py-20 px-4" style={{ paddingTop: "120px" }}>
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/kids doing math.jpg')",
+            backgroundImage: "url('/elementary-school-children-doing-math-worksheets.jpg')",
           }}
         />
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-4xl mx-auto text-center">
           <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-12 max-w-2xl mx-auto">
-            <h1 className="text-5xl font-bold text-[#1E1E1E] mb-4" style={{ fontFamily: "Oswald" }}>
+            <h1 className="text-5xl font-bold text-[#1E1E1E] mb-4" style={{ fontFamily: "Oswald, sans-serif" }}>
               Grade 1 Mathematics
             </h1>
           </div>
@@ -37,7 +215,7 @@ export default function Grade1MathPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-[#1E1E1E]" style={{ fontFamily: "Oswald" }}>
+              <h2 className="text-3xl font-bold text-[#1E1E1E]" style={{ fontFamily: "Oswald, sans-serif" }}>
                 Designed to build & strengthen foundational math skills.
               </h2>
               <p className="text-lg text-[#1E1E1E] leading-relaxed">
