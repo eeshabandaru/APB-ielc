@@ -19,7 +19,7 @@ export default function Grade1MathPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/elementary-school-children-doing-math-worksheets.jpg')",
+            backgroundImage: "url('/elementary-school-children-reading-books-together-.jpg')",
           }}
         />
         <div className="absolute inset-0 bg-black/20" />
