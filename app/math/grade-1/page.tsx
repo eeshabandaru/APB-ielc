@@ -37,7 +37,7 @@ export default function Grade1MathPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-[#1E1E1E]" style={{ fontFamily: "Oswald, sans-serif" }}>
+              <h2 className="text-3xl font-bold text-[#1E1E1E]" style={{ fontFamily: "Oswald" }}>
                 Designed to build & strengthen foundational math skills.
               </h2>
               <p className="text-lg text-[#1E1E1E] leading-relaxed">
