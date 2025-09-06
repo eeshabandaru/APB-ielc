@@ -25,7 +25,7 @@ export default function Grade1EnglishPage() {
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-4xl mx-auto text-center">
           <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-12 max-w-2xl mx-auto">
-            <h1 className="text-5xl font-bold text-[#1E1E1E] mb-4" style={{ fontFamily: "Oswald, sans-serif" }}>
+            <h1 className="text-5xl font-bold text-[#1E1E1E] mb-4" style={{ fontFamily: "Oswald" }}>
               Grade 1 English
             </h1>
           </div>
