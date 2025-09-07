@@ -106,7 +106,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             <MetricCard bg="#D96E4C" icon={<Users className="w-8 h-8 text-[#D96E4C]" />}>
               <MetricNumber className="text-white">
-                <CountUp to={500} suffix="+" />
+                <CountUp to={200} suffix="+" />
               </MetricNumber>
               <MetricLabel className="text-white/90">Students Enrolled</MetricLabel>
             </MetricCard>
