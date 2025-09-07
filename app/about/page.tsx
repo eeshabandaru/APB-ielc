@@ -264,30 +264,7 @@ function MetricLabel({ className = "", children }: { className?: string; childre
   return <p className={`text-lg ${className}`}>{children}</p>
 }
 
-/* Families Reached card (tight, consistent sizing, no weird wrapping) */
-function FamiliesGrowthCard() {
-  return (
-    <MetricCard bg="#FFD93D" icon={<Heart className="w-8 h-8 text-[#FFD93D]" />}>
-      <div className="space-y-4 text-[#0B1D39]">
-        <p className="text-xl leading-tight">
-          <span className="font-medium">Year 1:</span>{" "}
-          <span className="text-3xl font-semibold whitespace-nowrap">
-            <CountUp to={20} /> <span className="mx-1">→</span> <CountUp to={50} />
-          </span>
-          <span className="block mt-1 text-lg">students</span>
-        </p>
-        <p className="text-xl leading-tight">
-          <span className="font-medium">Year 2:</span>{" "}
-          <span className="text-3xl font-semibold whitespace-nowrap">
-            <CountUp to={200} suffix="+" />
-          </span>{" "}
-          families
-        </p>
-      </div>
-      <MetricLabel className="text-[#0B1D39]/90">Families Reached</MetricLabel>
-    </MetricCard>
-  )
-}
+
 
 /* Simple bar chart: 20 → 50 → 200 (max=200) */
 function GrowthBars() {
