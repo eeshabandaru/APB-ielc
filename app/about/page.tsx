@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { GraduationCap, Users, BookOpen, Award, Clock, Heart } from "lucide-react"
 
-/* ---------------- helpers: in-view + count-up ---------------- */
+/* ---------------- helpers ---------------- */
 function useInView(ref: React.RefObject<HTMLElement>, threshold = 0.25) {
   const [inView, setInView] = useState(false)
   useEffect(() => {
@@ -111,8 +111,6 @@ export default function AboutPage() {
               <MetricLabel className="text-white/90">Students Enrolled</MetricLabel>
             </MetricCard>
 
-            <FamiliesGrowthCard />
-
             <MetricCard bg="#8B2F2F" icon={<Award className="w-8 h-8 text-[#8B2F2F]" />}>
               <MetricNumber className="text-white">
                 <CountUp to={95} suffix="%" />
@@ -123,6 +121,13 @@ export default function AboutPage() {
             <MetricCard bg="#0B1D39" icon={<Clock className="w-8 h-8 text-[#0B1D39]" />}>
               <MetricNumber className="text-white">7-Week</MetricNumber>
               <MetricLabel className="text-white/90">Summer Program</MetricLabel>
+            </MetricCard>
+
+            <MetricCard bg="#D96E4C" icon={<BookOpen className="w-8 h-8 text-[#D96E4C]" />}>
+              <MetricNumber className="text-white">
+                <CountUp to={20} suffix="+" />
+              </MetricNumber>
+              <MetricLabel className="text-white/90">Volunteer Tutors</MetricLabel>
             </MetricCard>
           </div>
 
@@ -235,7 +240,7 @@ export default function AboutPage() {
   )
 }
 
-/* ---------------- presentational bits ---------------- */
+/* ---------------- components ---------------- */
 
 function MetricCard({
   bg,
@@ -264,32 +269,7 @@ function MetricLabel({ className = "", children }: { className?: string; childre
   return <p className={`text-lg ${className}`}>{children}</p>
 }
 
-/* Families Reached card (tight, consistent sizing, no weird wrapping) */
-function FamiliesGrowthCard() {
-  return (
-    <MetricCard bg="#FFD93D" icon={<Heart className="w-8 h-8 text-[#FFD93D]" />}>
-      <div className="space-y-4 text-[#0B1D39]">
-        <p className="text-xl leading-tight">
-          <span className="font-medium">Year 1:</span>{" "}
-          <span className="text-3xl font-semibold whitespace-nowrap">
-            <CountUp to={20} /> <span className="mx-1">→</span> <CountUp to={50} />
-          </span>
-          <span className="block mt-1 text-lg">students</span>
-        </p>
-        <p className="text-xl leading-tight">
-          <span className="font-medium">Year 2:</span>{" "}
-          <span className="text-3xl font-semibold whitespace-nowrap">
-            <CountUp to={200} suffix="+" />
-          </span>{" "}
-          families
-        </p>
-      </div>
-      <MetricLabel className="text-[#0B1D39]/90">Families Reached</MetricLabel>
-    </MetricCard>
-  )
-}
-
-/* Simple bar chart: 20 → 50 → 200 (max=200) */
+/* Growth bar chart */
 function GrowthBars() {
   const data = [
     { label: "Start (Y1)", value: 20, color: "#E6CD67" },
@@ -302,7 +282,7 @@ function GrowthBars() {
       <h3 className="text-2xl font-semibold text-[#0B1D39] mb-6 text-center">Growth at a Glance</h3>
       <div className="grid sm:grid-cols-3 gap-6 items-end">
         {data.map((d) => {
-          const pct = Math.max(8, Math.round((d.value / max) * 100)) // min height so small bars still visible
+          const pct = Math.max(8, Math.round((d.value / max) * 100))
           return (
             <div key={d.label} className="flex flex-col items-center gap-3">
               <div className="w-20 sm:w-24 h-56 bg-gray-100 rounded-xl relative overflow-hidden">
