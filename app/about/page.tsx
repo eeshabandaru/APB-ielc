@@ -6,7 +6,7 @@ import { GraduationCap, Users, BookOpen, Award, Clock, Heart } from "lucide-reac
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-background font-sans">
+    <div className="min-h-screen bg-background font-['Oswald']">
       {/* Hero Section */}
       <section className="bg-[#D96E4C] py-20 px-4" style={{ paddingTop: "120px" }}>
         <div className="max-w-4xl mx-auto text-center">
@@ -60,101 +60,67 @@ export default function AboutPage() {
 
           {/* Metrics Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <Card className="bg-[#D96E4C] border-0 shadow-lg rounded-2xl">
-              <CardContent className="p-8 text-center space-y-4">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
+            {/* Students Enrolled */}
+            <Card className="bg-[#D96E4C] border-0 shadow-lg rounded-2xl h-full">
+              <CardContent className="p-8 text-center flex flex-col justify-center h-full">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-[#D96E4C]" />
                 </div>
-                <div>
-                  <h3 className="text-3xl font-bold text-white">500+</h3>
-                  <p className="text-white/90 font-medium">Students Enrolled</p>
-                </div>
+                <h3 className="text-3xl font-bold text-white">500+</h3>
+                <p className="text-white/90 font-medium">Students Enrolled</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-[#FFD93D] border-0 shadow-lg rounded-2xl">
-  <CardContent className="p-8 text-center space-y-4">
-    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-      <Heart className="w-8 h-8 text-[#FFD93D]" />
-    </div>
-    <div>
-      <h3 className="text-2xl font-bold text-[#0B1D39] leading-snug">
-        Year 1: <span className="text-3xl">20 → 50</span> students <br />
-        Year 2: <span className="text-3xl">200+</span> families
-      </h3>
-      <p className="text-[#0B1D39]/90 font-medium mt-2">Families Reached</p>
-    </div>
-  </CardContent>
-</Card>
+            {/* Families Reached */}
+            <Card className="bg-[#FFD93D] border-0 shadow-lg rounded-2xl h-full">
+              <CardContent className="p-8 text-center flex flex-col justify-center h-full">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Heart className="w-8 h-8 text-[#FFD93D]" />
+                </div>
+                <div className="space-y-2">
+                  <p className="text-lg font-bold text-[#0B1D39] leading-tight">
+                    Year 1: <span className="text-2xl">20 → 50</span> students
+                  </p>
+                  <p className="text-lg font-bold text-[#0B1D39] leading-tight">
+                    Year 2: <span className="text-2xl">200+</span> families
+                  </p>
+                </div>
+                <p className="text-[#0B1D39]/90 font-medium mt-3">Families Reached</p>
+              </CardContent>
+            </Card>
 
-            <Card className="bg-[#8B2F2F] border-0 shadow-lg rounded-2xl">
-              <CardContent className="p-8 text-center space-y-4">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
+            {/* Confidence */}
+            <Card className="bg-[#8B2F2F] border-0 shadow-lg rounded-2xl h-full">
+              <CardContent className="p-8 text-center flex flex-col justify-center h-full">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="w-8 h-8 text-[#8B2F2F]" />
                 </div>
-                <div>
-                  <h3 className="text-3xl font-bold text-white">95%</h3>
-                  <p className="text-white/90 font-medium">Improved Confidence & Readiness</p>
-                </div>
+                <h3 className="text-3xl font-bold text-white">95%</h3>
+                <p className="text-white/90 font-medium">Improved Confidence & Readiness</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-[#0B1D39] border-0 shadow-lg rounded-2xl">
-              <CardContent className="p-8 text-center space-y-4">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
+            {/* Summer Program */}
+            <Card className="bg-[#0B1D39] border-0 shadow-lg rounded-2xl h-full">
+              <CardContent className="p-8 text-center flex flex-col justify-center h-full">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="w-8 h-8 text-[#0B1D39]" />
                 </div>
-                <div>
-                  <h3 className="text-3xl font-bold text-white">7-Week</h3>
-                  <p className="text-white/90 font-medium">Summer Program</p>
-                </div>
+                <h3 className="text-3xl font-bold text-white">7-Week</h3>
+                <p className="text-white/90 font-medium">Summer Program</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-[#D96E4C] border-0 shadow-lg rounded-2xl">
-              <CardContent className="p-8 text-center space-y-4">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
+            {/* Tutors */}
+            <Card className="bg-[#D96E4C] border-0 shadow-lg rounded-2xl h-full">
+              <CardContent className="p-8 text-center flex flex-col justify-center h-full">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
                   <BookOpen className="w-8 h-8 text-[#D96E4C]" />
                 </div>
-                <div>
-                  <h3 className="text-3xl font-bold text-white">20+</h3>
-                  <p className="text-white/90 font-medium">Volunteer Tutors</p>
-                </div>
+                <h3 className="text-3xl font-bold text-white">20+</h3>
+                <p className="text-white/90 font-medium">Volunteer Tutors</p>
               </CardContent>
             </Card>
-          </div>
-
-          {/* Testimonials */}
-          {/* (unchanged testimonial cards) */}
-
-          {/* Impact Story Section */}
-          <div className="bg-[#D96E4C] rounded-2xl p-8 lg:p-12">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="relative">
-                <img
-                  src="/happy-elementary-school-children-learning-together.jpg"
-                  alt="Students and tutors working together"
-                  className="w-full h-auto rounded-2xl shadow-lg"
-                />
-              </div>
-              <div className="space-y-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <Heart className="w-8 h-8 text-white" />
-                  <h3 className="text-4xl font-bold text-white text-balance">Growing Together</h3>
-                </div>
-                <p className="text-xl text-white/90 leading-relaxed">
-                  What started as a small initiative to help a few students has grown into a thriving community of
-                  learners. IELC was founded on the belief that every child deserves access to quality education,
-                  regardless of their background.
-                </p>
-                <p className="text-lg text-white/80 leading-relaxed">
-                  Through the dedication of our volunteer tutors and the enthusiasm of our students, we've created an
-                  environment where learning is both effective and enjoyable. Each summer, we see students gain
-                  confidence, improve their skills, and develop a love for learning that lasts well beyond our
-                  seven-week program.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
