@@ -78,7 +78,8 @@ export default function AboutPage() {
                   <Heart className="w-8 h-8 text-[#FFD93D]" />
                 </div>
                 <div>
-                  <h3 className="text-3xl font-bold text-[#0B1D39]">200+</h3>
+                  <h3 className="text-3xl font-bold text-[#0B1D39]">Year 1: 50 families reached
+                  Year 2: 200+</h3>
                   <p className="text-[#0B1D39]/90 font-medium">Families Helped</p>
                 </div>
               </CardContent>
