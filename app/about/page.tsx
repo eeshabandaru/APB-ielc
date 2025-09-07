@@ -302,7 +302,7 @@ function GrowthBars() {
       <p className="text-center text-gray-600 mt-6">
         We started with <span className="font-semibold">20</span> students, closed Year 1 at{" "}
         <span className="font-semibold">50</span>, and reached{" "}
-        <span className="font-semibold">200+</span> families in Year 2.
+        <span className="font-semibold">200+</span> students in Year 2.
       </p>
     </div>
   )
