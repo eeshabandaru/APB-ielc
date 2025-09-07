@@ -73,17 +73,19 @@ export default function AboutPage() {
             </Card>
 
             <Card className="bg-[#FFD93D] border-0 shadow-lg rounded-2xl">
-              <CardContent className="p-8 text-center space-y-4">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                  <Heart className="w-8 h-8 text-[#FFD93D]" />
-                </div>
-                <div>
-                  <h3 className="text-3xl font-bold text-[#0B1D39]">Year 1: 50 families reached
-                  Year 2: 200+</h3>
-                  <p className="text-[#0B1D39]/90 font-medium">Families Helped</p>
-                </div>
-              </CardContent>
-            </Card>
+  <CardContent className="p-8 text-center space-y-4">
+    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
+      <Heart className="w-8 h-8 text-[#FFD93D]" />
+    </div>
+    <div>
+      <h3 className="text-2xl font-bold text-[#0B1D39] leading-snug">
+        Year 1: <span className="text-3xl">20 → 50</span> students <br />
+        Year 2: <span className="text-3xl">200+</span> families
+      </h3>
+      <p className="text-[#0B1D39]/90 font-medium mt-2">Families Reached</p>
+    </div>
+  </CardContent>
+</Card>
 
             <Card className="bg-[#8B2F2F] border-0 shadow-lg rounded-2xl">
               <CardContent className="p-8 text-center space-y-4">
